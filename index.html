@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Should I Design? - the design prompt generator</title>
+ <link rel="stylesheet" href="designomatic_fix.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+<article>
+	
+	<div class="row">
+			<div class="title">B</div>
+			<div class="title">I</div>
+			<div class="title">N</div>
+			<div class="title">G</div>
+			<div class="title">O</div>
+		</div>
+
+		<div class="row">
+			<div id="b1" class="cell"></div>
+			<div class="cell" id="b2"></div>
+			<div class="cell" id="b3"></div>
+			<div class="cell" id="b4"></div>
+			<div class="cell" id="b5"></div>
+		</div>
+	
+	<div class="row">
+			<div class="cell" id="b6"></div>
+			<div class="cell" id="b7"></div>
+			<div class="cell" id="b8"></div>
+			<div class="cell" id="b9"></div>
+			<div class="cell" id="b10"></div>
+		</div>
+
+	<div class="row">
+			<div class="cell" id="b11"></div>
+			<div class="cell" id="b12"></div>
+			<div class="active" id="free">FREE</div>
+			<div class="cell" id="b14"></div>
+			<div class="cell" id="b15"></div>
+		</div>
+
+	<div class="row">
+			<div class="cell" id="b16"></div>
+			<div class="cell" id="b17"></div>
+			<div class="cell" id="b18"></div>
+			<div class="cell" id="b19"></div>
+			<div class="cell" id="b20"></div>
+		</div>
+
+	<div class="row">
+			<div class="cell" id="b21"></div>
+			<div class="cell" id="b22"></div>
+			<div class="cell" id="b23"></div>
+			<div class="cell" id="b24"></div>
+			<div class="cell" id="b25"></div>
+		</div>
+		
+
+</article>
+
+
+<script>
+
+$(document).ready(function() {
+    var quotes = new Array("leverage", "MVP", "learning", "education", "analytics", "personal", "empower", "clients", "data", "lean", "mobile", "easy", "customer", "envision", "bug", "report", "leader", "cycle", "blockers", "course", "goal", "priortize", "accessibility", "EPAM", "technical", "question", "test", "agile", "success", "learner", "teacher", "partner", "strategy", "growth", "win", "work", "remote", "measure", "ROW", "PATH", "UX", "simple", "FUSION", "Brightspace", "Spark", "continous", "development", "sales", "detail", "John", "gamification", "example", "fruit", "platform", "monolith", "patent", "quarter", "target", "alignment", "Nick", "spreadsheet", "Ken", "Jeremy", "integration", "QA", "discussion", "next-gen", "brand", "cloud", "lead-gen", "apps", "big data", "integrated", "service", "Amazon", "ARGON", "deploy", "Remy", "Brandon", "values", "mission", "objective", "milestone", "adaptive", "Brazil", "corporate", "future", "potential", "delivery", "service", "architecture", "demo", "product", "ignite", "K12", "Florida", "mic", "sound", "Winterfest", "PIE", "hack", "traction", "district");
+    var i;
+    for (i = 0; i < 26; i++) {
+    	var end = quotes.length-i;
+        var selected = Math.floor( Math.random() * end )
+         var b = quotes[selected];
+        
+         $('#b'+ i).html("<span>"+ b +"</span>");
+         quotes[selected] = quotes[end-1];
+	}
+});
+
+</script>
+
+<script>
+	$(function(){
+ 			 $(".cell").click(function(){
+     			$(this).toggleClass("active");
+  	});
+
+  $(this).css('background-color', '#17beba');
+  $(this).css('border-color', '#17beba');
+   $(this).css('color', '#fff');
+
+
+});
+
+</script>
+
+</body>
+</html>

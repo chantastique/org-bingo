@@ -1,0 +1,206 @@
+
+
+/* Fonts from Font Squirrel (http://www.fontsquirrel.com); thanks guys! */
+@font-face {  
+	font-family: 'roboto_slabbold';
+	src: url('fontkit/robotoslab-bold-webfont.eot'); 
+	src: url('fontkit/robotoslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fontkit/robotoslab-bold-webfont.woff') format('woff'),
+			 url('fontkit/robotoslab-bold-webfont.ttf') format('truetype'),
+			 url('fontkit/robotoslab-bold-webfont.svg#roboto_slabbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face { 
+	font-family: 'ralewaybold';
+	src: url('fontkit/raleway-bold-webfont.eot');
+	src: url('fontkit/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fontkit/raleway-bold-webfont.woff') format('woff'),
+			 url('fontkit/raleway-bold-webfont.ttf') format('truetype'),
+			 url('fontkit/raleway-bold-webfont.svg#ralewaybold') format('svg');
+		
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'roboto_slabregular';  
+	src: url('fontkit/robotoslab-regular-webfont.eot');   
+	src: url('fontkit/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('fontkit/robotoslab-regular-webfont.woff') format('woff'),
+			 url('fontkit/robotoslab-regular-webfont.ttf') format('truetype'),
+			 url('fontkit/robotoslab-regular-webfont.svg#roboto_slabregular') format('svg');  
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Global styles live here. */
+
+body {
+	background: #fff;
+	font-family: 'roboto_slabregular';  
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/* font-size: 1em; */
+}
+
+p,div {
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+	color: #13A89E;
+	text-decoration: none;
+}
+
+a:active, a:visited, a:hover{
+	color: #13A89E;
+	text-decoration: underline;
+}
+
+.row {
+	display: block;
+	width: 900px;
+	margin:0 auto;
+	clear: both;
+}
+.row div {
+	width: 140px;
+	height: 70px;
+	padding: 5px;
+	margin: 5px;
+	color: #21beb9;
+	border: 5px #b8ecea solid;
+	font-size: 15pt;
+	float: left;
+	text-align: center;
+
+}
+
+.row div.title {
+	width: 140px;
+	height: 100px;
+	padding: 10px;
+	margin: 5px;
+	background: #f1521d;
+	color: #f6cf53;
+	float: left;
+	font-size: 47pt;
+	
+	border: 0;
+}
+
+.row div:hover {
+	 cursor: pointer;
+	 background: #b8ecea;
+}
+
+.row div.title:hover {
+	 cursor: default;
+	 background: #f1521d;
+}
+
+#free {
+	font-size: 26pt;
+}
+
+.cell {
+  display: table-cell; 
+  vertical-align: middle;
+}
+
+.cell span {
+	top: 20%;
+	position: relative;
+	vertical-align: middle;
+}
+
+.cell.active, .active, #free:hover {
+	background-color: #17beba;
+  	border-color: #17beba !important;
+   	color: #fff !important;
+}
+
+#metabar {
+	color: #fff;
+	background: #000;
+	font-family: 'roboto_slabregular';
+	font-size: 9pt;
+	margin: 200px 0 0 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: right;
+}
+
+#metabar aside {
+		display: inline;
+	}
+	
+#monet {
+	font-size: 10pt;
+}
+
+
+/* try to fix up the wack spacing on social media buttons */
+.fb-like {
+	position: relative;
+	top: -11px;
+	left: -4px;
+}
+
+
+/* TO DO: Make the site mobile friendly... Not there yet. :'( */
+
+/* general mobile */
+@media screen and (max-width :420px){
+	#content {
+		padding-left: 10px;
+		padding-top: 10px;
+		width: 80%;
+		line-height: 1.5;
+		font-size: 17pt;
+	}
+	
+	
+	#content #againagain {
+	width: 80%;
+	padding: 12px;
+	position: fixed;
+	bottom: 10;
+	margin: 10px 0 0 0;
+	font-size: 15pt;
+}
+
+	
+	#metabar aside {
+		display: none;
+	}
+	
+	#socialmedia, #monet {
+	display: none;
+}
+
+}
+
+
+
+/* general iPhone */
+@media screen and (max-width : 470px){
+	#content {
+		font-size: 25pt;
+		line-height: 150%;
+	}
+
+	#content br {
+		display: none;
+	}
+} 
+
+
+/* general tablet */
+@media screen and (max-width : 760px){} 
